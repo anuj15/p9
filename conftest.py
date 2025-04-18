@@ -2,6 +2,7 @@ import base64
 import functools
 import os
 import shutil
+import subprocess
 from pathlib import Path
 
 import allure
@@ -11,6 +12,8 @@ from pytest_html import extras
 from pytest_metadata.plugin import metadata_key
 
 from utils.config_manager import ConfigManager
+from utils.emailer import send_mail
+from utils.env_manager import get_env
 from utils.log_manager import LogManager
 
 obj_config = ConfigManager()
@@ -93,3 +96,11 @@ def allure_step(step_name):
         return wrapper
 
     return decorator
+
+
+@pytest.hookimpl(tryfirst=True)
+def pytest_sessionfinish():
+    if get_env("LOCAL_EXECUTION"):
+        os.chdir(root_dir)
+        subprocess.run(["allure.bat", "generate", allure_result_path, "-o", allure_report_path, "--clean"])
+        send_mail()
