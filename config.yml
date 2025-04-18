@@ -9,7 +9,7 @@ screenshots_path: reports/screenshots
 project_title: Practice Project
 project_description: This is a practice project for testing
 project_version: 1.0.0
-headless: false
+headless: true
 environment: dev
 dev:
   base_url: https://automationexercise.com/
