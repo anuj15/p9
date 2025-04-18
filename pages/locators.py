@@ -1,0 +1,5 @@
+login_link = "a[href='/login']"
+logout_link = "a[href='/logout']"
+username = "input[data-qa='login-email']"
+password = "input[data-qa='login-password']"
+login_btn = "button[data-qa='login-button']"
