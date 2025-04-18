@@ -1,0 +1,21 @@
+browser: chromium
+report_folder_path: reports
+log_file_path: logs/app.log
+log_level: INFO
+html_report_path: reports/basic_report.html
+allure_result_path: reports/allure-results
+allure_report_path: reports/allure-report
+screenshots_path: reports/screenshots
+project_title: Practice Project
+project_description: This is a practice project for testing
+project_version: 1.0.0
+headless: false
+environment: dev
+dev:
+  base_url: https://automationexercise.com/
+  username: ab@b.com
+  password: ab@b.com
+stage:
+  base_url: stage.com
+prod:
+  base_url: prod.com
