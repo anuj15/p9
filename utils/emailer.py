@@ -1,14 +1,17 @@
+import os
 import smtplib
 from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
 
-from .env_manager import get_env
+from dotenv import load_dotenv
 
-EMAIL_FROM = get_env("EMAIL_FROM")
-EMAIL_TO = get_env("EMAIL_TO")
-EMAIL_PASSWORD = get_env("EMAIL_PASSWORD")
+load_dotenv()
+
+EMAIL_FROM = os.getenv("EMAIL_FROM")
+EMAIL_TO = os.getenv("EMAIL_TO")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 msg = MIMEMultipart()
 msg["From"] = EMAIL_FROM
 msg["To"] = EMAIL_TO

@@ -7,15 +7,16 @@ from pathlib import Path
 
 import allure
 import pytest
+from dotenv import load_dotenv
 from playwright.sync_api import sync_playwright
 from pytest_html import extras
 from pytest_metadata.plugin import metadata_key
 
 from utils.config_manager import ConfigManager
 from utils.emailer import send_mail
-from utils.env_manager import get_env
 from utils.log_manager import LogManager
 
+load_dotenv()
 obj_config = ConfigManager()
 logger = LogManager().get_logger()
 root_dir = Path(__file__).resolve().parent
@@ -100,7 +101,7 @@ def allure_step(step_name):
 
 @pytest.hookimpl(tryfirst=True)
 def pytest_sessionfinish():
-    if get_env("LOCAL_EXECUTION"):
+    if os.getenv("LOCAL_EXECUTION"):
         os.chdir(root_dir)
         subprocess.run(["allure.bat", "generate", allure_result_path, "-o", allure_report_path, "--clean"])
         send_mail()
