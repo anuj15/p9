@@ -1,11 +1,11 @@
-2025-04-18 18:17:52,432 - Browser launched successfully
-2025-04-18 18:18:03,694 - Navigated to: https://automationexercise.com/
-2025-04-18 18:18:04,635 - Clicked on: a[href='/login']
-2025-04-18 18:18:04,734 - Input 'ab@b.com' into: input[data-qa='login-email']
-2025-04-18 18:18:04,751 - Input 'ab@b.com' into: input[data-qa='login-password']
-2025-04-18 18:18:05,777 - Clicked on: button[data-qa='login-button']
-2025-04-18 18:18:06,149 - Screenshot captured successfully
-2025-04-18 18:18:10,963 - Navigated to: https://automationexercise.com/
-2025-04-18 18:18:11,809 - Clicked on: a[href='/logout']
-2025-04-18 18:18:11,984 - Screenshot captured successfully
-2025-04-18 18:18:12,086 - Browser closed successfully
+2025-04-19 15:36:35,121 - Browser launched successfully
+2025-04-19 15:36:44,603 - Navigated to: https://automationexercise.com/
+2025-04-19 15:36:45,203 - Clicked on: a[href='/login']
+2025-04-19 15:36:45,312 - Input 'ab@b.com' into: input[data-qa='login-email']
+2025-04-19 15:36:45,331 - Input 'ab@b.com' into: input[data-qa='login-password']
+2025-04-19 15:36:46,268 - Clicked on: button[data-qa='login-button']
+2025-04-19 15:36:46,570 - Screenshot captured successfully
+2025-04-19 15:36:50,269 - Navigated to: https://automationexercise.com/
+2025-04-19 15:36:51,170 - Clicked on: a[href='/logout']
+2025-04-19 15:36:51,349 - Screenshot captured successfully
+2025-04-19 15:36:51,468 - Browser closed successfully
