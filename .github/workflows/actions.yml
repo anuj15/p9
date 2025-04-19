@@ -40,8 +40,8 @@ jobs:
             logs/app.log
       - name: Send email
         if: always()
-        run: python utils/emailer.py send_mail
+        run: python utils/emailer.py
         env:
-          EMAIL_USERNAME: ${{ secrets.EMAIL_FROM }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}

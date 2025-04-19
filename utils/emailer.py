@@ -41,3 +41,7 @@ def send_mail():
     with smtplib.SMTP_SSL(SERVER, PORT) as server:
         server.login(EMAIL_FROM, EMAIL_PASSWORD)
         server.send_message(msg)
+
+
+if __name__ == "__main__":
+    send_mail()
